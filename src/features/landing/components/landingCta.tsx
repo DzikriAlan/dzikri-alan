@@ -1,5 +1,5 @@
 // 1. Import External Library
-import { ArrowUpRight, Send } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
 // 5. Import Reusable Component
@@ -39,16 +39,15 @@ export default function LandingCta() {
           </div>
 
           <div className="relative flex w-full flex-wrap gap-4 md:w-auto">
-            <Button>
-              Hire Me Now
-              <ArrowUpRight />
-            </Button>
-            <Button
-              variant="outline"
-              className="border-white/25 bg-black/40 font-semibold text-white backdrop-blur-sm hover:bg-black/60"
-            >
-              Send Message
-              <Send />
+            <Button asChild>
+              <a
+                href="https://wa.me/6282123339099"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hire Me Now
+                <ArrowUpRight />
+              </a>
             </Button>
           </div>
         </div>

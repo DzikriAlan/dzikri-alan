@@ -53,9 +53,15 @@ export default function LandingHero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <Button>
-              Hire Me
-              <ArrowUpRight />
+            <Button asChild>
+              <a
+                href="https://wa.me/6282123339099"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hire Me
+                <ArrowUpRight />
+              </a>
             </Button>
             <Button variant="outline">
               View Work

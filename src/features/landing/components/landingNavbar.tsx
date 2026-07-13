@@ -62,7 +62,15 @@ export default function LandingNavbar() {
           </ul>
 
           <div className="hidden md:block">
-            <Button size="sm">Hire Me</Button>
+            <Button size="sm" asChild>
+              <a
+                href="https://wa.me/6282123339099"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hire Me
+              </a>
+            </Button>
           </div>
 
           <button
