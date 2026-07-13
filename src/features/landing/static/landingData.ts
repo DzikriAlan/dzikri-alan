@@ -114,20 +114,28 @@ export const landingProjects = [
     image: "/work/trendnowai.webp",
   },
   {
-    category: "Data Dashboard",
-    title: "Kazee Smartboard",
-    description:
-      "Contributed to design architecture planning and chatbot integration to analyze each widget's data.",
-    tags: ["Vue.js", "SSE/WebSockets", "Pinia"],
-    image: "/work/smartboard.webp",
-  },
-  {
-    category: "AI Search",
+    category: "AI Platform",
     title: "AI Search",
     description:
       "Contributed to design architecture planning and AI integration for semantic and contextual search.",
     tags: ["Vue.js", "AI Integration"],
     image: "/work/aisearch.webp",
+  },
+  {
+    category: "AI Platform",
+    title: "Chaplin",
+    description:
+      "Production-grade AI agent platform that turns a team's knowledge into AI agents for support and workflow automation, with real-time chat via SSE and WebSockets.",
+    tags: ["Next.js", "TypeScript", "TanStack Query", "NextAuth.js"],
+    image: "/work/chaplin.webp",
+  },
+  {
+    category: "AI Platform",
+    title: "Kazee Smartboard",
+    description:
+      "Contributed to design architecture planning and chatbot integration to analyze each widget's data.",
+    tags: ["Vue.js", "SSE/WebSockets", "Pinia"],
+    image: "/work/smartboard.webp",
   },
   {
     category: "Education",
@@ -154,36 +162,12 @@ export const landingProjects = [
     image: "/work/lurah.webp",
   },
   {
-    category: "Education",
-    title: "Web Ekskul ICT",
+    category: "Starter Kit",
+    title: "Blayer",
     description:
-      "Started from the need of students who wanted to register as members of the ICT extracurricular club.",
-    tags: ["Vue.js", "TypeScript", "Tailwind CSS"],
-    image: "/work/ict.webp",
-  },
-  {
-    category: "Business",
-    title: "Laundry System",
-    description:
-      "Helps new Vue 2 developers learn through a real-world app — covering auth, CRUD, and patterns useful as a first portfolio.",
-    tags: ["Vue 2", "Vuex", "REST API"],
-    image: "/work/laundry.webp",
-  },
-  {
-    category: "Event",
-    title: "Hacara",
-    description:
-      "Vendor recommendation platform for personal events like weddings, circumcisions, and birthdays.",
-    tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    image: "/work/hacara.webp",
-  },
-  {
-    category: "E-commerce",
-    title: "Salestu",
-    description:
-      "Helps sellers grow their business with vendor references and tools to streamline customer follow-ups.",
-    tags: ["Vue.js", "Pinia", "Tailwind CSS"],
-    image: "/work/salestu.webp",
+      "Production-ready Next.js 14 starter with TypeScript, Tailwind CSS, TanStack Query, Zustand, and Prisma — built for rapid feature development with consistent architecture conventions.",
+    tags: ["Next.js", "TypeScript", "Prisma", "TanStack Query"],
+    image: "/work/blayer.webp",
   },
   {
     category: "Content",
