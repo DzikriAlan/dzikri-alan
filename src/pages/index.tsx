@@ -3,18 +3,15 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 // 5. Import Feature Components
-import LandingNavbar from "@/features/landing/components/landingNavbar";
 import LandingHero from "@/features/landing/components/landingHero";
-import LandingMarquee from "@/features/landing/components/landingMarquee";
+import LandingOverview from "@/features/landing/components/landingOverview";
+import LandingStrategy from "@/features/landing/components/landingStrategy";
 import LandingServices from "@/features/landing/components/landingServices";
-import LandingAbout from "@/features/landing/components/landingAbout";
 import LandingWork from "@/features/landing/components/landingWork";
-import LandingTestimonials from "@/features/landing/components/landingTestimonials";
-import LandingCta from "@/features/landing/components/landingCta";
 import LandingFooter from "@/features/landing/components/landingFooter";
 import { useScrollSpy } from "@/features/landing/hooks/useScrollSpy";
 
-const SECTION_IDS = ["home", "services", "about", "work", "testimonials", "contact"];
+const SECTION_IDS = ["home", "services", "work"];
 
 const Home: NextPage = () => {
   useScrollSpy(SECTION_IDS);
@@ -29,14 +26,11 @@ const Home: NextPage = () => {
         />
       </Head>
       <main className="min-h-screen bg-neutral-950">
-        <LandingNavbar />
         <LandingHero />
-        <LandingMarquee />
-        <LandingServices />
-        <LandingAbout />
+        <LandingOverview />
         <LandingWork />
-        <LandingTestimonials />
-        <LandingCta />
+        <LandingStrategy />
+        <LandingServices />
         <LandingFooter />
       </main>
     </>

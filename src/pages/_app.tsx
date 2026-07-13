@@ -1,13 +1,39 @@
 import type { AppProps } from "next/app";
-import { Sora, JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import "@/shared/styles/globals.css";
 
-const sora = Sora({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-sora",
+const saans = localFont({
+  src: [
+    {
+      path: "../shared/fonts/saans/Saans-TRIAL-Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../shared/fonts/saans/Saans-TRIAL-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../shared/fonts/saans/Saans-TRIAL-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../shared/fonts/saans/Saans-TRIAL-SemiBold.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../shared/fonts/saans/Saans-TRIAL-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-saans",
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -29,7 +55,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
       <div
-        className={`${sora.variable} ${jetbrainsMono.variable} font-sans`}
+        className={`${jetbrainsMono.variable} ${saans.variable} font-sans`}
       >
         <Component {...pageProps} />
       </div>

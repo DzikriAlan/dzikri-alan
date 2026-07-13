@@ -43,7 +43,7 @@ export default function LandingServices() {
               How I can <span className="text-brand">help you</span>
             </h2>
           </div>
-          <p className="max-w-sm text-sm text-neutral-400">
+          <p className="max-w-sm text-sm text-neutral-300">
             I help businesses and startups build digital products that are
             scalable, maintainable, and user-friendly.
           </p>

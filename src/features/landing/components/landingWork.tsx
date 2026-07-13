@@ -1,181 +1,94 @@
-"use client";
-
 // 1. Import External Library
-import { Fragment, useEffect, useRef, useState } from "react";
-import Image from "next/image";
-
-// 5. Import Reusable Component
-import { cn } from "@/shared/lib/utils";
+import Image, { type StaticImageData } from "next/image";
 
 // 7. Static Data
 import { landingExperience, landingProjects } from "../static/landingData";
 
-type Tab = "experience" | "projects";
-
 interface Row {
   key: string;
-  badge: string;
-  logo?: string;
+  category: string;
   title: string;
-  subtitle?: string;
   description: string;
-  image: string;
-  highlighted?: boolean;
+  tags: string[];
+  image: string | StaticImageData;
 }
 
+const rows: Row[] = [
+  ...landingExperience.map((exp) => ({
+    key: exp.company,
+    category: exp.period,
+    title: exp.company,
+    description: exp.description,
+    tags: [exp.role],
+    image: exp.image,
+  })),
+  ...landingProjects.map((project) => ({
+    key: project.title,
+    category: project.category,
+    title: project.title,
+    description: project.description,
+    tags: project.tags,
+    image: project.image,
+  })),
+];
+
 export default function LandingWork() {
-  // 8. State
-  const [tab, setTab] = useState<Tab>("experience");
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  // 10. Effects
-  useEffect(() => {
-    scrollRef.current?.scrollTo({ top: 0 });
-  }, [tab]);
-
-  // 9. Derived Data
-  const rows: Row[] =
-    tab === "experience"
-      ? landingExperience.map((exp) => ({
-          key: exp.company,
-          badge: exp.period,
-          logo: exp.logo,
-          title: exp.company,
-          subtitle: exp.role,
-          description: exp.description,
-          image: exp.image,
-          highlighted: exp.current,
-        }))
-      : landingProjects.map((project) => ({
-          key: project.title,
-          badge: project.category,
-          title: project.title,
-          subtitle: project.tags.join(" · "),
-          description: project.description,
-          image: project.image,
-        }));
-
   return (
     <section id="work" className="scroll-mt-28 py-20">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-20">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="mb-2 font-mono text-sm font-medium uppercase tracking-widest text-brand">
-              EXPERIENCE
-            </p>
-            <h2 className="text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
-              Experience <span className="text-brand">&amp; Projects</span>
-            </h2>
-          </div>
+        <p className="mb-2 font-mono text-sm font-medium uppercase tracking-widest text-brand">
+          WORK
+        </p>
+        <h2 className="text-4xl font-normal text-foreground sm:text-5xl">
+          Experience &amp; Projects
+        </h2>
+        <p className="mt-6 max-w-md text-neutral-300">
+          I&apos;ve been building frontend products and platforms, from
+          AI-driven tools to production systems, as a solo developer or as
+          part of a larger engineering team.
+        </p>
 
-          <div className="inline-flex w-fit rounded-full border border-surface-border p-1">
-            <button
-              type="button"
-              onClick={() => setTab("experience")}
-              className={cn(
-                "rounded-full px-4 py-2 text-sm font-medium transition-colors",
-                tab === "experience"
-                  ? "bg-brand text-neutral-950"
-                  : "text-neutral-300 hover:text-foreground",
-              )}
+        <div className="relative mt-16">
+          {rows.map((row, index) => (
+            <div
+              key={row.key}
+              style={{ zIndex: index + 1, top: "96px" }}
+              className="sticky mb-6 grid overflow-hidden rounded-2xl border border-surface-border bg-black shadow-card md:grid-cols-2"
             >
-              Experience
-            </button>
-            <button
-              type="button"
-              onClick={() => setTab("projects")}
-              className={cn(
-                "rounded-full px-4 py-2 text-sm font-medium transition-colors",
-                tab === "projects"
-                  ? "bg-brand text-neutral-950"
-                  : "text-neutral-300 hover:text-foreground",
-              )}
-            >
-              Projects
-            </button>
-          </div>
-        </div>
+              <div className="flex flex-col justify-between gap-6 p-8 sm:p-10 lg:p-12">
+                <p className="font-mono text-sm uppercase tracking-widest text-brand">
+                  {row.category}
+                </p>
 
-        <div className="relative mt-10">
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-neutral-950 to-transparent lg:hidden" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-neutral-950 to-transparent lg:hidden" />
-
-          <div
-            ref={scrollRef}
-            className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] lg:grid lg:max-h-[488px] lg:snap-none lg:grid-cols-[160px_1fr] lg:gap-x-10 lg:gap-y-10 lg:overflow-x-visible lg:overflow-y-auto lg:pb-0 lg:pr-2 [&::-webkit-scrollbar]:hidden"
-          >
-            {rows.map((row, index) => (
-              <Fragment key={row.key}>
-                <div className="relative hidden pl-6 lg:block">
-                  {index !== rows.length - 1 && (
-                    <span className="absolute -bottom-10 left-[3px] top-3 w-px bg-surface-border" />
-                  )}
-                  <span
-                    className={cn(
-                      "absolute left-0 top-1.5 size-2 rounded-full",
-                      row.highlighted ? "bg-brand" : "bg-neutral-600",
-                    )}
-                  />
-                  <p className="text-sm font-medium text-foreground">{row.badge}</p>
+                <div>
+                  <p className="text-xl font-semibold text-foreground sm:text-2xl">
+                    {row.title}
+                  </p>
+                  <p className="mt-3 max-w-md text-neutral-300">
+                    {row.description}
+                  </p>
+                  <p className="mt-4 text-sm text-brand">
+                    {row.tags.join(" · ")}
+                  </p>
                 </div>
+              </div>
 
-                <div
-                  className={cn(
-                    "flex w-[85vw] shrink-0 snap-start flex-col gap-6 rounded-2xl border p-6 lg:grid lg:h-56 lg:w-auto lg:shrink lg:grid-cols-[1fr_260px]",
-                    row.highlighted ? "border-brand/50" : "border-surface-border",
-                  )}
-                >
-                  <div className="flex flex-col justify-center overflow-hidden">
-                    <p className="mb-2 font-mono text-xs text-neutral-500 lg:hidden">
-                      {row.badge}
-                    </p>
-                    <div className="mb-3 flex items-center gap-3">
-                      {row.logo && (
-                        <div className="relative flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-surface-border bg-white">
-                          <Image
-                            src={row.logo}
-                            alt=""
-                            fill
-                            className="object-contain p-1.5"
-                          />
-                        </div>
-                      )}
-                      <div>
-                        <p className="font-semibold text-foreground">{row.title}</p>
-                        {row.subtitle && (
-                          <p className="text-sm text-brand">{row.subtitle}</p>
-                        )}
-                      </div>
-                    </div>
-                    <p className="line-clamp-3 text-sm text-neutral-400">
-                      {row.description}
-                    </p>
+              <div className="relative flex min-h-[280px] items-center justify-center bg-neutral-950 p-10 md:min-h-[360px]">
+                <div className="relative aspect-video w-full max-w-md">
+                  {/* Stacked photo effect: two tilted decoy frames peeking out behind the real image. */}
+                  <div className="absolute inset-0 translate-x-3 translate-y-3 rotate-6 overflow-hidden rounded-xl border border-surface-border bg-neutral-900 opacity-80">
+                    <Image src={row.image} alt="" fill className="object-cover" />
                   </div>
-
-                  <div className="relative aspect-video lg:aspect-auto lg:h-full">
-                    {/* Stacked photo effect: two tilted decoy frames peeking out behind the real image.
-                        [-webkit-mask-image] forces Safari onto its correct compositing path for
-                        rounded-corner + overflow-hidden layers, which otherwise render blurry during
-                        momentum scroll on iOS. */}
-                    <div className="absolute inset-0 translate-x-3 translate-y-3 rotate-6 overflow-hidden rounded-xl border border-surface-border bg-neutral-900 opacity-80 [-webkit-mask-image:-webkit-radial-gradient(white,black)]">
-                      <Image src={row.image} alt="" fill className="object-cover" />
-                    </div>
-                    <div className="absolute inset-0 -translate-x-2 translate-y-2 -rotate-3 overflow-hidden rounded-xl border border-surface-border bg-neutral-900 opacity-90 [-webkit-mask-image:-webkit-radial-gradient(white,black)]">
-                      <Image src={row.image} alt="" fill className="object-cover" />
-                    </div>
-                    <div className="absolute inset-0 overflow-hidden rounded-xl border border-surface-border shadow-card [-webkit-mask-image:-webkit-radial-gradient(white,black)]">
-                      <Image
-                        src={row.image}
-                        alt={row.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
+                  <div className="absolute inset-0 -translate-x-2 translate-y-2 -rotate-3 overflow-hidden rounded-xl border border-surface-border bg-neutral-900 opacity-90">
+                    <Image src={row.image} alt="" fill className="object-cover" />
+                  </div>
+                  <div className="absolute inset-0 overflow-hidden rounded-xl border border-surface-border shadow-card">
+                    <Image src={row.image} alt={row.title} fill className="object-cover" />
                   </div>
                 </div>
-              </Fragment>
-            ))}
-          </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

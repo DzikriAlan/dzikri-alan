@@ -1,112 +1,19 @@
 // 1. Import External Library
 import Image from "next/image";
-import { ArrowUpRight, Sparkles } from "lucide-react";
 
 // 5. Import Reusable Component
 import { Button } from "@/components/ui/button";
 
 // 7. Static Data
-import { landingHighlights } from "../static/landingData";
-import heroArt from "@/shared/assets/hero.webp";
-import heroPhoto from "@/shared/assets/guey.webp";
-
-const dotGridIds = [
-  "a1", "a2", "a3", "a4",
-  "b1", "b2", "b3", "b4",
-  "c1", "c2", "c3", "c4",
-  "d1", "d2", "d3", "d4",
-];
+import heroPhoto from "@/shared/styles/guehi.png";
 
 export default function LandingHero() {
   return (
-    <section
-      id="home"
-      className="relative scroll-mt-28 overflow-hidden pb-32 pt-20"
-    >
-      {/* Decorative grid backdrop, only a soft band near the Services boundary. bg-fixed keeps the
-          48px grid locked to viewport coordinates so it lines up with Services' identical grid. */}
-      <div
-        className="pointer-events-none absolute inset-0 bg-fixed [background-image:linear-gradient(to_right,rgba(255,255,255,.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,.08)_1px,transparent_1px)] [background-size:48px_48px] [mask-image:linear-gradient(to_bottom,transparent_0%,transparent_60%,black_100%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,transparent_60%,black_100%)]"
-      />
-
-      {/* Corner dot accents marking the seam with Services, right side */}
-      <div className="pointer-events-none absolute bottom-24 right-8 hidden grid-cols-4 gap-2 lg:grid">
-        {dotGridIds.map((id) => (
-          <span key={id} className="size-1 rounded-full bg-foreground/15" />
-        ))}
-      </div>
-
-      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 sm:px-8 md:grid-cols-2 lg:px-12 xl:px-20">
-        <div className="order-2 md:order-1">
-          <p className="mb-4 font-mono text-sm text-brand">
-            {"< FRONTEND DEVELOPER />"}
-          </p>
-          <h1 className="text-3xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
-            Hi, I&apos;m
-            <br />
-            <span className="text-brand">Dzikri Alan</span>
-          </h1>
-          <p className="mt-6 max-w-md text-base text-neutral-300 sm:text-lg">
-            Frontend Developer with 3 years of experience building scalable,
-            performant, and maintainable interfaces for various end-to-end
-            digital products.
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Button asChild>
-              <a
-                href="https://wa.me/6282123339099"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Hire Me
-                <ArrowUpRight />
-              </a>
-            </Button>
-            <Button variant="outline">
-              View Work
-              <ArrowUpRight />
-            </Button>
-          </div>
-
-          <div className="mt-12 flex flex-wrap gap-8">
-            {landingHighlights.map((highlight) => (
-              <div key={highlight.title} className="flex items-center gap-2">
-                <highlight.icon className="size-5 text-brand" />
-                <div>
-                  <p className="text-sm font-semibold text-foreground">
-                    {highlight.title}
-                  </p>
-                  <p className="text-xs text-neutral-400">
-                    {highlight.subtitle}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="relative order-1 mx-auto aspect-square w-full max-w-3xl md:order-2">
-          {/* Backdrop art, fitted exactly to the frame. Sharp throughout, fading smoothly
-              to the page's dark background toward the edges (no blur/glass look). */}
-          <div className="absolute inset-0 overflow-hidden rounded-[2.5rem]">
-            <Image src={heroArt} alt="" fill className="object-cover" />
-            <div className="absolute inset-0 [background:radial-gradient(ellipse_closest-side_at_center,transparent_45%,rgba(5,5,5,0.95)_100%)]" />
-          </div>
-
-          {/* Subject cutout, floating above the backdrop art */}
-          <div className="absolute inset-0">
-            <Image
-              src={heroPhoto}
-              alt="Dzikri Alan"
-              fill
-              priority
-              className="object-contain object-bottom"
-            />
-          </div>
-
-          {/* Floating badge: availability */}
-          <div className="absolute left-2 bottom-6 flex animate-float items-center gap-2 rounded-full border border-surface-border bg-neutral-950/90 px-4 py-2 shadow-soft backdrop-blur sm:-left-6">
+    <section id="home" className="relative scroll-mt-28 overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-2">
+        {/* Text panel */}
+        <div className="flex min-h-screen flex-col justify-between bg-neutral-950 px-6 py-16 sm:px-10 lg:px-16 lg:py-20 xl:px-24">
+          <span className="inline-flex items-center gap-2 self-start rounded-full border border-surface-border bg-neutral-900/80 px-4 py-2">
             <span className="relative flex size-2">
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-brand opacity-75" />
               <span className="relative inline-flex size-2 rounded-full bg-brand" />
@@ -114,18 +21,69 @@ export default function LandingHero() {
             <span className="text-xs font-medium text-foreground">
               Available for work
             </span>
+          </span>
+
+          <div>
+            <h1 className="max-w-xl text-3xl font-thin leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
+              Creating fast experiences, built to scale
+            </h1>
+
+            <p className="mt-6 max-w-md text-base text-neutral-300 sm:text-lg">
+              Frontend Developer with 3 years of experience building
+              scalable, performant, and maintainable interfaces for various
+              end-to-end digital products.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Button asChild className="rounded-full">
+                <a href="#overview">Find out more</a>
+              </Button>
+            </div>
           </div>
 
-          {/* Floating badge: role chip */}
-          <div
-            className="absolute right-2 top-6 flex animate-float items-center gap-1.5 rounded-2xl border border-brand/30 bg-neutral-950/90 px-3 py-2 shadow-soft backdrop-blur sm:-right-4"
-            style={{ animationDelay: "1.5s" }}
-          >
-            <Sparkles className="size-4 text-brand" />
-            <span className="text-xs font-medium text-foreground">
-              DzikriAlan
-            </span>
-          </div>
+          <p className="text-sm text-neutral-300">
+            Find me at{" "}
+            <a
+              href="https://github.com/DzikriAlan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand underline underline-offset-4"
+            >
+              GitHub
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://www.linkedin.com/in/dzikri-alan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand underline underline-offset-4"
+            >
+              LinkedIn
+            </a>
+            .
+            <br />
+            Download my{" "}
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand underline underline-offset-4"
+            >
+              resume
+            </a>{" "}
+            (PDF 248kb)
+          </p>
+        </div>
+
+        {/* Photo panel */}
+        <div className="relative min-h-screen bg-neutral-900">
+          <Image
+            src={heroPhoto}
+            alt="Dzikri Alan"
+            fill
+            priority
+            className="object-cover"
+          />
         </div>
       </div>
     </section>

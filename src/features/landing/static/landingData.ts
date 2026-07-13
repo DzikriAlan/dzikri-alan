@@ -8,14 +8,8 @@ import {
   Layers,
 } from "lucide-react";
 
-export const landingNavLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#work" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
-];
+import blayerPorto from "@/shared/assets/blayer-porto.png";
+import chaplinPorto from "@/shared/assets/chaplin-porto.png";
 
 export const landingHighlights = [
   { icon: Star, title: "3+ Years", subtitle: "Experience" },
@@ -64,13 +58,6 @@ export const landingServices = [
     description:
       "Optimizing prompt-driven API generation and high-performance API integration to speed up development turnaround.",
   },
-];
-
-export const landingStats = [
-  { value: "3+", label: "Years Experience" },
-  { value: "5+", label: "Projects Completed" },
-  { value: "2", label: "Companies" },
-  { value: "40%", label: "Faster API Turnaround" },
 ];
 
 export const landingExperience = [
@@ -127,7 +114,7 @@ export const landingProjects = [
     description:
       "Production-grade AI agent platform that turns a team's knowledge into AI agents for support and workflow automation, with real-time chat via SSE and WebSockets.",
     tags: ["Next.js", "TypeScript", "TanStack Query", "NextAuth.js"],
-    image: "/work/chaplin.webp",
+    image: chaplinPorto,
   },
   {
     category: "AI Platform",
@@ -167,7 +154,7 @@ export const landingProjects = [
     description:
       "Production-ready Next.js 14 starter with TypeScript, Tailwind CSS, TanStack Query, Zustand, and Prisma — built for rapid feature development with consistent architecture conventions.",
     tags: ["Next.js", "TypeScript", "Prisma", "TanStack Query"],
-    image: "/work/blayer.webp",
+    image: blayerPorto,
   },
   {
     category: "Content",
@@ -200,21 +187,3 @@ export const landingTestimonials = [
   },
 ];
 
-export const landingFooterNav = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-];
-
-export const landingFooterWork = [
-  { label: "Work", href: "#work" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
-];
-
-export const landingFooterServices = [
-  { label: "Frontend Development", href: "#services" },
-  { label: "UI Implementation", href: "#services" },
-  { label: "Web Application", href: "#services" },
-  { label: "Performance Optimization", href: "#services" },
-];

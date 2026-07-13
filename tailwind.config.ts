@@ -13,9 +13,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-sora)", "sans-serif"],
-        display: ["var(--font-sora)", "sans-serif"],
+        sans: ["var(--font-saans)", "sans-serif"],
+        display: ["var(--font-saans)", "sans-serif"],
         mono: ["var(--font-jetbrains-mono)", "monospace"],
+        saans: ["var(--font-saans)", "sans-serif"],
       },
 
       colors: {

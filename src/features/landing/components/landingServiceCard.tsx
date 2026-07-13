@@ -19,7 +19,7 @@ export default function LandingServiceCard({
         <Icon className="size-5" />
       </div>
       <h3 className="mb-2 font-semibold text-foreground">{title}</h3>
-      <p className="text-sm text-neutral-400">{description}</p>
+      <p className="text-sm text-neutral-300">{description}</p>
     </div>
   );
 }
