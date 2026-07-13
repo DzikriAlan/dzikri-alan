@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 // 7. Static Data
-import heroPhoto from "@/shared/styles/guehi.png";
+import heroPhoto from "@/shared/styles/guehi.webp";
 
 export default function LandingHero() {
   return (
@@ -65,13 +65,14 @@ export default function LandingHero() {
             Download my{" "}
             <a
               href="/resume.pdf"
+              download="Dzikri Alan - Frontend Developer.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-brand underline underline-offset-4"
             >
               resume
             </a>{" "}
-            (PDF 248kb)
+            (PDF 159kb)
           </p>
         </div>
 
