@@ -96,11 +96,14 @@ export default function LandingWork() {
           </div>
         </div>
 
-        <div
-          ref={scrollRef}
-          className="mt-10 max-h-[488px] overflow-y-auto pr-2 [-ms-overflow-style:none] [scrollbar-width:thin] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-surface-border [&::-webkit-scrollbar-track]:bg-transparent"
-        >
-          <div className="grid grid-cols-1 gap-x-10 gap-y-10 lg:grid-cols-[160px_1fr]">
+        <div className="relative mt-10">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-neutral-950 to-transparent lg:hidden" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-neutral-950 to-transparent lg:hidden" />
+
+          <div
+            ref={scrollRef}
+            className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] lg:grid lg:max-h-[488px] lg:snap-none lg:grid-cols-[160px_1fr] lg:gap-x-10 lg:gap-y-10 lg:overflow-x-visible lg:overflow-y-auto lg:pb-0 lg:pr-2 [&::-webkit-scrollbar]:hidden"
+          >
             {rows.map((row, index) => (
               <Fragment key={row.key}>
                 <div className="relative hidden pl-6 lg:block">
@@ -118,7 +121,7 @@ export default function LandingWork() {
 
                 <div
                   className={cn(
-                    "grid gap-6 rounded-2xl border p-6 sm:h-56 sm:grid-cols-[1fr_260px]",
+                    "w-[85vw] shrink-0 snap-start rounded-2xl border p-6 lg:grid lg:w-auto lg:shrink lg:grid-cols-[1fr_260px] lg:gap-6 sm:h-56",
                     row.highlighted ? "border-brand/50" : "border-surface-border",
                   )}
                 >
@@ -149,13 +152,22 @@ export default function LandingWork() {
                     </p>
                   </div>
 
-                  <div className="relative aspect-video overflow-hidden rounded-xl border border-surface-border sm:aspect-auto sm:h-full">
-                    <Image
-                      src={row.image}
-                      alt={row.title}
-                      fill
-                      className="object-cover"
-                    />
+                  <div className="relative aspect-video sm:aspect-auto sm:h-full">
+                    {/* Stacked photo effect: two tilted decoy frames peeking out behind the real image */}
+                    <div className="absolute inset-0 translate-x-3 translate-y-3 rotate-6 overflow-hidden rounded-xl border border-surface-border bg-neutral-900 opacity-50 grayscale">
+                      <Image src={row.image} alt="" fill className="object-cover" />
+                    </div>
+                    <div className="absolute inset-0 -translate-x-2 translate-y-2 -rotate-3 overflow-hidden rounded-xl border border-surface-border bg-neutral-900 opacity-75 grayscale">
+                      <Image src={row.image} alt="" fill className="object-cover" />
+                    </div>
+                    <div className="absolute inset-0 overflow-hidden rounded-xl border border-surface-border shadow-card">
+                      <Image
+                        src={row.image}
+                        alt={row.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
               </Fragment>
