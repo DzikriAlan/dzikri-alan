@@ -3,6 +3,8 @@ import { Star, CheckCircle2, Layers } from "lucide-react";
 import blayerPorto from "@/shared/assets/blayer-porto.webp";
 import chaplinPorto from "@/shared/assets/chaplin-porto.webp";
 import abdulhadiAvatar from "@/shared/assets/abdulhadi.webp";
+import auliaharvyAvatar from "@/shared/assets/auliaharvy.webp";
+import farhanmuhammadAvatar from "@/shared/assets/farhanmuhammad.webp";
 
 export const landingHighlights = [
   { icon: Star, title: "3+ Years", subtitle: "Experience" },
@@ -167,6 +169,7 @@ export const landingTestimonials = [
     name: "Farhan Muhamad",
     role: "Founder, Copetera",
     linkedinUrl: "https://id.linkedin.com/in/farhan-muhamad",
+    avatar: farhanmuhammadAvatar,
   },
   {
     quote:
@@ -174,6 +177,7 @@ export const landingTestimonials = [
     name: "Aulia Harvy",
     role: "CEO, Surya Microsystems International",
     linkedinUrl: "https://id.linkedin.com/in/auliaharvy",
+    avatar: auliaharvyAvatar,
   },
   {
     quote:
