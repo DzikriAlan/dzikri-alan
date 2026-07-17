@@ -3,7 +3,6 @@ import { Star, CheckCircle2, Layers } from "lucide-react";
 import blayerPorto from "@/shared/assets/blayer-porto.webp";
 import chaplinPorto from "@/shared/assets/chaplin-porto.webp";
 import abdulhadiAvatar from "@/shared/assets/abdulhadi.webp";
-import auliaharvyAvatar from "@/shared/assets/auliaharvy.webp";
 import farhanmuhammadAvatar from "@/shared/assets/farhanmuhammad.webp";
 
 export const landingHighlights = [
@@ -170,14 +169,6 @@ export const landingTestimonials = [
     role: "Founder, Coptera Career",
     linkedinUrl: "https://www.linkedin.com/in/farhan-muhamad/",
     avatar: farhanmuhammadAvatar,
-  },
-  {
-    quote:
-      "As his lead at Surya Microsystems, I saw Dzikri consistently stabilize sprint velocity and keep several production apps running smoothly, all while clearly communicating progress to stakeholders.",
-    name: "Aulia Harvy",
-    role: "CEO, Surya Microsystems International",
-    linkedinUrl: "https://id.linkedin.com/in/auliaharvy",
-    avatar: auliaharvyAvatar,
   },
   {
     quote:
