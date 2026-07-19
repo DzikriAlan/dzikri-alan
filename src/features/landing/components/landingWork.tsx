@@ -1,5 +1,6 @@
 // 1. Import External Library
 import Image, { type StaticImageData } from "next/image";
+import { useTranslation } from "next-i18next";
 
 // 7. Static Data
 import { landingExperience, landingProjects } from "../static/landingData";
@@ -13,40 +14,52 @@ interface Row {
   image: string | StaticImageData;
 }
 
-const rows: Row[] = [
-  ...landingExperience.map((exp) => ({
-    key: exp.company,
-    category: exp.period,
-    title: exp.company,
-    description: exp.description,
-    tags: [exp.role],
-    image: exp.image,
-  })),
-  ...landingProjects.map((project) => ({
-    key: project.title,
-    category: project.category,
-    title: project.title,
-    description: project.description,
-    tags: project.tags,
-    image: project.image,
-  })),
-];
+interface ExperienceText {
+  role: string;
+  description: string;
+}
+
+interface ProjectText {
+  category: string;
+  description: string;
+}
 
 export default function LandingWork() {
+  const { t } = useTranslation("common");
+  const experienceText = t("work.experience", {
+    returnObjects: true,
+  }) as ExperienceText[];
+  const projectText = t("work.projects", { returnObjects: true }) as ProjectText[];
+
+  const rows: Row[] = [
+    ...landingExperience.map((exp, index) => ({
+      key: exp.company,
+      category: exp.period,
+      title: exp.company,
+      description: experienceText[index].description,
+      tags: [experienceText[index].role],
+      image: exp.image,
+    })),
+    ...landingProjects.map((project, index) => ({
+      key: project.title,
+      category: projectText[index].category,
+      title: project.title,
+      description: projectText[index].description,
+      tags: project.tags,
+      image: project.image,
+    })),
+  ];
+
   return (
     <section id="work" className="scroll-mt-28 py-20">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-20">
         <p className="mb-2 font-mono text-sm font-medium uppercase tracking-widest text-brand">
-          WORK
+          {t("work.eyebrow")}
         </p>
         <h2 className="text-4xl font-normal text-foreground sm:text-5xl">
-          Experience &amp; Projects
+          {t("work.title")}
         </h2>
-        <p className="mt-6 max-w-md text-neutral-300">
-          I&apos;ve been building frontend products and platforms, from
-          AI-driven tools to production systems, as a solo developer or as
-          part of a larger engineering team.
-        </p>
+        <p className="mt-6 max-w-md text-neutral-300">{t("work.description")}</p>
 
         <div className="relative mt-16">
           {rows.map((row, index) => (

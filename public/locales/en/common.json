@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "title": "DzikriAlan | Frontend Developer",
+    "description": "Dzikri Alan is a Frontend Developer who builds modern, fast and scalable web applications."
+  },
+  "languageToggle": {
+    "id": "ID",
+    "en": "EN",
+    "label": "Language"
+  },
+  "hero": {
+    "badge": "Available for work",
+    "title": "Creating fast experiences, built to scale",
+    "subtitle": "Frontend Developer with 3 years of experience building scalable, performant, and maintainable interfaces for various end-to-end digital products.",
+    "cta": "Find out more",
+    "findMe": "Find me at",
+    "and": "and",
+    "download": "Download my",
+    "resume": "resume",
+    "resumeSize": "(PDF 159kb)"
+  },
+  "overview": {
+    "introTitle": "Frontend Developer experienced in taking products from concept to launch.",
+    "introDescription": "If you're looking to build a scalable, AI-driven web product, get in touch to discuss your requirements with me in more detail.",
+    "sayHello": "Say hello",
+    "showTestimonialFrom": "Show testimonial from {{name}}",
+    "previousTestimonial": "Previous testimonial",
+    "nextTestimonial": "Next testimonial",
+    "skillCardTitle": "Frontend Engineering",
+    "skillCardDescription": "Building scalable, maintainable interfaces with Vue, Nuxt, Next.js, and React.",
+    "aiCardTitle": "Frontend AI Application Specialist",
+    "aiCardDescription": "Prompt and context engineering, LLM integration, and AI-driven code generation across chat interfaces, semantic search, and MCP servers."
+  },
+  "work": {
+    "eyebrow": "WORK",
+    "title": "Experience & Projects",
+    "description": "I've been building frontend products and platforms, from AI-driven tools to production systems, as a solo developer or as part of a larger engineering team.",
+    "experience": [
+      {
+        "role": "Frontend Developer",
+        "description": "Designed scalable frontend architecture with Vue and TypeScript across 3 products, engineered interactive AI chat interfaces with real-time streaming, and automated API generation to cut development turnaround by 40%."
+      },
+      {
+        "role": "Frontend Developer",
+        "description": "Applied component-based frontend approaches with Vue.js and Element Plus across concurrent client projects, and maintained production apps including the LSP Exam System, Cost Control App, and Village Website."
+      }
+    ],
+    "projects": [
+      {
+        "category": "Media Intelligence",
+        "description": "Contributed to maintenance such as bug fixing and the creation of the media relations sub-feature."
+      },
+      {
+        "category": "AI Platform",
+        "description": "Contributed to the initial development, from the landing page to blog content management."
+      },
+      {
+        "category": "AI Platform",
+        "description": "Contributed to design architecture planning and AI integration for semantic and contextual search."
+      },
+      {
+        "category": "AI Platform",
+        "description": "Production-grade AI agent platform that turns a team's knowledge into AI agents for support and workflow automation, with real-time chat via SSE and WebSockets."
+      },
+      {
+        "category": "AI Platform",
+        "description": "Contributed to design architecture planning and chatbot integration to analyze each widget's data."
+      },
+      {
+        "category": "Education",
+        "description": "Contributed to the creation of many exam forms and determination of the exam application flow."
+      },
+      {
+        "category": "Finance",
+        "description": "Contributed to website maintenance, including bug fixing, dashboard feature optimization, and more."
+      },
+      {
+        "category": "Government",
+        "description": "Contributed to the feature for community submission requests for personal document creation."
+      },
+      {
+        "category": "Starter Kit",
+        "description": "Production-ready Next.js 14 starter with TypeScript, Tailwind CSS, TanStack Query, Zustand, and Prisma — built for rapid feature development with consistent architecture conventions."
+      },
+      {
+        "category": "Content",
+        "description": "Curates high-quality Product & Design case studies so anyone can learn from real experience easily and relevantly."
+      }
+    ]
+  },
+  "strategy": {
+    "eyebrow": "Strategy",
+    "paragraphs": [
+      "I build frontend experiences that are fast, scalable, and made to last. Using Vue, Next.js, React, and AI tooling, I ensure they perform reliably across real-time data streams and complex integrations.",
+      "Whether it's an AI chat interface, a data visualization dashboard, or a full-stack product, I design and develop with a focus on performance, maintainability, and developer experience."
+    ]
+  },
+  "faq": {
+    "eyebrow": "Frequently asked questions",
+    "items": [
+      {
+        "question": "What projects do you work on?",
+        "answer": "Mostly AI-driven web products and full-stack platforms — interactive AI chat interfaces, geospatial and statistical data visualization, semantic search, and fact-checking tools, alongside production SaaS work like Chaplin, Blayer, and Casetudy."
+      },
+      {
+        "question": "Do you work remotely or on-site?",
+        "answer": "I'm based in Bandung, Jawa Barat, and work remotely with teams and clients across time zones — I've done this for 3 years at Kazee Digital Indonesia and Surya Microsystems, collaborating async with cross-functional teams."
+      },
+      {
+        "question": "What's your tech stack and tooling?",
+        "answer": "Vue.js, Nuxt, Next.js, React, and TypeScript on the frontend; Node.js, NestJS, Prisma, and PostgreSQL on the backend; plus SSE/WebSockets for real-time streaming and Claude Code, DeepSeek, and prompt engineering for AI-driven workflows."
+      },
+      {
+        "question": "Can I see more of your work?",
+        "answer": "Yes — check the Experience & Projects section above for case studies like Chaplin, Blayer, Kazee Smartboard, and the LSP Exam System, or reach out directly for a deeper walkthrough."
+      },
+      {
+        "question": "How can I start a new project?",
+        "answer": "Send me an email or a message on WhatsApp with a short brief of what you're building — I'll get back to you to discuss requirements, scope, and timeline in more detail."
+      }
+    ]
+  },
+  "footer": {
+    "heading": "It's time to build your next web project. Let's work together and deliver success."
+  },
+  "testimonials": [
+    {
+      "quote": "I had a great experience working with Dzikri. He consistently delivered clean, high-quality work and demonstrated strong technical skills. Communication was always clear and professional, making collaboration smooth and efficient. Dzikri is reliable, easy to work with, and always committed to delivering the best results. I highly recommend him for any team or project."
+    },
+    {
+      "quote": "He has a strong sense of curiosity and is always eager to learn and grow. His frontend skills are excellent, and he's also a capable full-stack engineer. He's easy to work with, an effective team player, and even in high-pressure situations, he helps keep discussions calm and productive. On top of that, he has a strong sense of ownership—once he takes responsibility for something, he makes sure it's delivered well.\n\nI'm confident he'll continue to grow and become an even stronger, well-rounded engineer in the future."
+    }
+  ]
+}

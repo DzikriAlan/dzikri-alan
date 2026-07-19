@@ -2,16 +2,21 @@
 
 // 1. Import External Library
 import { useState } from "react";
+import { useTranslation } from "next-i18next";
 
 // 5. Import Reusable Component
 import ParticleFieldLazy from "@/shared/components/ParticleFieldLazy";
 import { PARTICLE_THEME } from "@/shared/components/ParticleField";
 
-// 7. Static Data
-import { landingFaqs } from "../static/landingData";
+interface FaqItem {
+  question: string;
+  answer: string;
+}
 
 export default function LandingFaq() {
   // 8. State
+  const { t } = useTranslation("common");
+  const landingFaqs = t("faq.items", { returnObjects: true }) as FaqItem[];
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -32,7 +37,7 @@ export default function LandingFaq() {
       />
       <div className="relative z-10 mx-auto max-w-3xl px-6 sm:px-8 lg:px-12 xl:px-20">
         <p className="mb-6 font-mono text-sm uppercase tracking-widest text-neutral-200 [text-shadow:0_0_12px_rgba(229,229,229,0.6)]">
-          Frequently asked questions
+          {t("faq.eyebrow")}
         </p>
 
         <div onMouseLeave={() => setHoveredIndex(null)}>

@@ -1,5 +1,6 @@
 // 1. Import External Library
 import { Github, Linkedin, Mail, Instagram } from "lucide-react";
+import { useTranslation } from "next-i18next";
 
 // 5. Import Reusable Component
 import ParticleFieldLazy from "@/shared/components/ParticleFieldLazy";
@@ -14,6 +15,8 @@ const socialLinks = [
 ];
 
 export default function LandingFooter() {
+  const { t } = useTranslation("common");
+
   return (
     <footer className="relative overflow-hidden py-24 sm:py-32">
       <ParticleFieldLazy
@@ -26,8 +29,7 @@ export default function LandingFooter() {
       />
       <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-20">
         <h2 className="max-w-2xl text-3xl font-normal leading-tight text-foreground sm:text-4xl lg:text-5xl">
-          It&apos;s time to build your next web project. Let&apos;s work
-          together and deliver success.
+          {t("footer.heading")}
         </h2>
 
         <div className="mt-8 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">

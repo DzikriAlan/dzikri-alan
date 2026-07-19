@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "title": "DzikriAlan | Frontend Developer",
+    "description": "Dzikri Alan adalah Frontend Developer yang membangun aplikasi web modern, cepat, dan skalabel."
+  },
+  "languageToggle": {
+    "id": "ID",
+    "en": "EN",
+    "label": "Bahasa"
+  },
+  "hero": {
+    "badge": "Tersedia untuk bekerja",
+    "title": "Menciptakan pengalaman cepat, dibangun untuk berkembang",
+    "subtitle": "Frontend Developer dengan pengalaman 3 tahun membangun antarmuka yang skalabel, performan, dan mudah dirawat untuk berbagai produk digital end-to-end.",
+    "cta": "Selengkapnya",
+    "findMe": "Temukan saya di",
+    "and": "dan",
+    "download": "Unduh",
+    "resume": "CV saya",
+    "resumeSize": "(PDF 159kb)"
+  },
+  "overview": {
+    "introTitle": "Frontend Developer berpengalaman membawa produk dari konsep hingga peluncuran.",
+    "introDescription": "Jika Anda ingin membangun produk web yang skalabel dan berbasis AI, hubungi saya untuk membahas kebutuhan Anda lebih lanjut.",
+    "sayHello": "Say hello",
+    "showTestimonialFrom": "Tampilkan testimoni dari {{name}}",
+    "previousTestimonial": "Testimoni sebelumnya",
+    "nextTestimonial": "Testimoni berikutnya",
+    "skillCardTitle": "Frontend Engineering",
+    "skillCardDescription": "Membangun antarmuka yang skalabel dan mudah dirawat dengan Vue, Nuxt, Next.js, dan React.",
+    "aiCardTitle": "Spesialis Aplikasi AI Frontend",
+    "aiCardDescription": "Prompt dan context engineering, integrasi LLM, serta pembuatan kode berbasis AI untuk antarmuka chat, pencarian semantik, dan MCP server."
+  },
+  "work": {
+    "eyebrow": "PENGALAMAN",
+    "title": "Pengalaman & Proyek",
+    "description": "Saya membangun produk dan platform frontend, mulai dari tools berbasis AI hingga sistem produksi, baik sebagai solo developer maupun bagian dari tim engineering yang lebih besar.",
+    "experience": [
+      {
+        "role": "Frontend Developer",
+        "description": "Merancang arsitektur frontend yang skalabel dengan Vue dan TypeScript di 3 produk, mengembangkan antarmuka chat AI interaktif dengan real-time streaming, serta mengotomatisasi pembuatan API sehingga mempercepat waktu pengembangan hingga 40%."
+      },
+      {
+        "role": "Frontend Developer",
+        "description": "Menerapkan pendekatan frontend berbasis komponen dengan Vue.js dan Element Plus di beberapa proyek klien secara bersamaan, serta memelihara aplikasi produksi termasuk LSP Exam System, Cost Control App, dan Village Website."
+      }
+    ],
+    "projects": [
+      {
+        "category": "Intelijen Media",
+        "description": "Berkontribusi dalam pemeliharaan seperti perbaikan bug dan pembuatan sub-fitur media relations."
+      },
+      {
+        "category": "Platform AI",
+        "description": "Berkontribusi dalam pengembangan awal, mulai dari landing page hingga manajemen konten blog."
+      },
+      {
+        "category": "Platform AI",
+        "description": "Berkontribusi dalam perencanaan arsitektur desain dan integrasi AI untuk pencarian semantik dan kontekstual."
+      },
+      {
+        "category": "Platform AI",
+        "description": "Platform agen AI production-grade yang mengubah pengetahuan tim menjadi agen AI untuk dukungan dan otomatisasi alur kerja, dengan chat real-time melalui SSE dan WebSockets."
+      },
+      {
+        "category": "Platform AI",
+        "description": "Berkontribusi dalam perencanaan arsitektur desain dan integrasi chatbot untuk menganalisis data setiap widget."
+      },
+      {
+        "category": "Pendidikan",
+        "description": "Berkontribusi dalam pembuatan berbagai formulir ujian dan penentuan alur aplikasi ujian."
+      },
+      {
+        "category": "Keuangan",
+        "description": "Berkontribusi dalam pemeliharaan website, termasuk perbaikan bug, optimasi fitur dashboard, dan lainnya."
+      },
+      {
+        "category": "Pemerintahan",
+        "description": "Berkontribusi dalam fitur permohonan pengajuan masyarakat untuk pembuatan dokumen pribadi."
+      },
+      {
+        "category": "Starter Kit",
+        "description": "Starter Next.js 14 siap produksi dengan TypeScript, Tailwind CSS, TanStack Query, Zustand, dan Prisma — dibuat untuk pengembangan fitur yang cepat dengan konvensi arsitektur yang konsisten."
+      },
+      {
+        "category": "Konten",
+        "description": "Mengumpulkan studi kasus Product & Design berkualitas tinggi agar siapa pun dapat belajar dari pengalaman nyata dengan mudah dan relevan."
+      }
+    ]
+  },
+  "strategy": {
+    "eyebrow": "Strategi",
+    "paragraphs": [
+      "Saya membangun pengalaman frontend yang cepat, skalabel, dan tahan lama. Dengan Vue, Next.js, React, dan tooling AI, saya memastikan performanya tetap andal di tengah aliran data real-time dan integrasi yang kompleks.",
+      "Baik itu antarmuka chat AI, dashboard visualisasi data, atau produk full-stack, saya merancang dan mengembangkan dengan fokus pada performa, kemudahan pemeliharaan, dan pengalaman developer."
+    ]
+  },
+  "faq": {
+    "eyebrow": "Pertanyaan yang sering diajukan",
+    "items": [
+      {
+        "question": "Proyek seperti apa yang biasa Anda kerjakan?",
+        "answer": "Sebagian besar produk web berbasis AI dan platform full-stack — antarmuka chat AI interaktif, visualisasi data geospasial dan statistik, pencarian semantik, dan tools fact-checking, di samping proyek SaaS produksi seperti Chaplin, Blayer, dan Casetudy."
+      },
+      {
+        "question": "Apakah Anda bekerja remote atau on-site?",
+        "answer": "Saya berdomisili di Bandung, Jawa Barat, dan bekerja remote dengan tim maupun klien lintas zona waktu — sudah saya lakukan selama 3 tahun di Kazee Digital Indonesia dan Surya Microsystems, berkolaborasi secara async dengan tim lintas fungsi."
+      },
+      {
+        "question": "Apa tech stack dan tools yang Anda gunakan?",
+        "answer": "Vue.js, Nuxt, Next.js, React, dan TypeScript di frontend; Node.js, NestJS, Prisma, dan PostgreSQL di backend; ditambah SSE/WebSockets untuk streaming real-time serta Claude Code, DeepSeek, dan prompt engineering untuk alur kerja berbasis AI."
+      },
+      {
+        "question": "Bisakah saya lihat portofolio Anda lebih lanjut?",
+        "answer": "Tentu — lihat bagian Pengalaman & Proyek di atas untuk studi kasus seperti Chaplin, Blayer, Kazee Smartboard, dan LSP Exam System, atau hubungi saya langsung untuk penjelasan yang lebih mendalam."
+      },
+      {
+        "question": "Bagaimana cara memulai proyek baru dengan Anda?",
+        "answer": "Kirim saya email atau pesan WhatsApp dengan brief singkat tentang apa yang ingin Anda bangun — saya akan membalas untuk membahas kebutuhan, ruang lingkup, dan timeline lebih lanjut."
+      }
+    ]
+  },
+  "footer": {
+    "heading": "Saatnya membangun proyek web berikutnya. Mari bekerja sama dan wujudkan kesuksesan."
+  },
+  "testimonials": [
+    {
+      "quote": "Saya punya pengalaman yang sangat baik bekerja dengan Dzikri. Ia konsisten menghasilkan pekerjaan yang rapi dan berkualitas tinggi serta menunjukkan kemampuan teknis yang kuat. Komunikasinya selalu jelas dan profesional, membuat kolaborasi berjalan lancar dan efisien. Dzikri dapat diandalkan, mudah diajak bekerja sama, dan selalu berkomitmen memberikan hasil terbaik. Saya sangat merekomendasikannya untuk tim atau proyek apa pun."
+    },
+    {
+      "quote": "Ia memiliki rasa ingin tahu yang tinggi dan selalu bersemangat untuk belajar dan berkembang. Kemampuan frontend-nya sangat baik, dan ia juga mampu menjadi full-stack engineer yang andal. Ia mudah diajak bekerja sama, menjadi rekan tim yang efektif, dan bahkan dalam situasi yang penuh tekanan, ia membantu menjaga diskusi tetap tenang dan produktif. Selain itu, ia memiliki rasa tanggung jawab yang kuat—begitu ia mengambil tanggung jawab atas sesuatu, ia memastikan hal itu terselesaikan dengan baik.\n\nSaya yakin ia akan terus berkembang menjadi engineer yang semakin kuat dan menyeluruh di masa depan."
+    }
+  ]
+}

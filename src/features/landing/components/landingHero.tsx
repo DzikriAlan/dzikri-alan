@@ -1,5 +1,6 @@
 // 1. Import External Library
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 // 5. Import Reusable Component
 import { Button } from "@/components/ui/button";
@@ -10,6 +11,8 @@ import { PARTICLE_THEME } from "@/shared/components/ParticleField";
 import heroPhoto from "@/shared/styles/guehi.webp";
 
 export default function LandingHero() {
+  const { t } = useTranslation("common");
+
   return (
     <section id="home" className="relative scroll-mt-28 overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -30,30 +33,28 @@ export default function LandingHero() {
               <span className="relative inline-flex size-2 rounded-full bg-brand" />
             </span>
             <span className="text-xs font-medium text-foreground">
-              Available for work
+              {t("hero.badge")}
             </span>
           </span>
 
           <div className="relative z-10">
             <h1 className="max-w-xl text-3xl font-thin leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
-              Creating fast experiences, built to scale
+              {t("hero.title")}
             </h1>
 
             <p className="mt-6 max-w-md text-base text-neutral-300 sm:text-lg">
-              Frontend Developer with 3 years of experience building
-              scalable, performant, and maintainable interfaces for various
-              end-to-end digital products.
+              {t("hero.subtitle")}
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
               <Button asChild className="rounded-full">
-                <a href="#overview">Find out more</a>
+                <a href="#overview">{t("hero.cta")}</a>
               </Button>
             </div>
           </div>
 
           <p className="relative z-10 text-sm text-neutral-300">
-            Find me at{" "}
+            {t("hero.findMe")}{" "}
             <a
               href="https://github.com/DzikriAlan"
               target="_blank"
@@ -62,7 +63,7 @@ export default function LandingHero() {
             >
               GitHub
             </a>{" "}
-            and{" "}
+            {t("hero.and")}{" "}
             <a
               href="https://www.linkedin.com/in/dzikri-alan/"
               target="_blank"
@@ -73,7 +74,7 @@ export default function LandingHero() {
             </a>
             .
             <br />
-            Download my{" "}
+            {t("hero.download")}{" "}
             <a
               href="/resume.pdf"
               download="Dzikri Alan - Frontend Developer.pdf"
@@ -81,9 +82,9 @@ export default function LandingHero() {
               rel="noopener noreferrer"
               className="text-brand underline underline-offset-4"
             >
-              resume
+              {t("hero.resume")}
             </a>{" "}
-            (PDF 159kb)
+            {t("hero.resumeSize")}
           </p>
         </div>
 

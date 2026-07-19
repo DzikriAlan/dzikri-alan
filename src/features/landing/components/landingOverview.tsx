@@ -4,6 +4,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
+import { useTranslation } from "next-i18next";
 
 // 5. Import Reusable Component
 import { Button } from "@/components/ui/button";
@@ -30,8 +31,20 @@ const frontendSkills = landingSkills.filter((skill) =>
 const AI_PROFICIENCY_SCORE = 90;
 const TESTIMONIAL_AUTOPLAY_INTERVAL_MS = 6000;
 
+interface TestimonialText {
+  quote: string;
+}
+
 export default function LandingOverview() {
   // 8. State
+  const { t, i18n } = useTranslation("common");
+  const testimonialText = t("testimonials", {
+    returnObjects: true,
+  }) as TestimonialText[];
+  const testimonials = landingTestimonials.map((testimonial, index) => ({
+    ...testimonial,
+    quote: testimonialText[index].quote,
+  }));
   const [now, setNow] = useState<Date | null>(null);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
@@ -44,25 +57,27 @@ export default function LandingOverview() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setActiveTestimonial((index) => (index + 1) % landingTestimonials.length);
+      setActiveTestimonial((index) => (index + 1) % testimonials.length);
     }, TESTIMONIAL_AUTOPLAY_INTERVAL_MS);
     return () => clearTimeout(timer);
-  }, [activeTestimonial]);
+  }, [activeTestimonial, testimonials.length]);
 
   // 11. Methods / Handlers
   const handlePrevTestimonial = () => {
     setActiveTestimonial(
-      (index) => (index - 1 + landingTestimonials.length) % landingTestimonials.length,
+      (index) => (index - 1 + testimonials.length) % testimonials.length,
     );
   };
 
   const handleNextTestimonial = () => {
-    setActiveTestimonial((index) => (index + 1) % landingTestimonials.length);
+    setActiveTestimonial((index) => (index + 1) % testimonials.length);
   };
 
-  const testimonial = landingTestimonials[activeTestimonial];
+  const testimonial = testimonials[activeTestimonial];
 
-  const dateLabel = now?.toLocaleDateString("en-US", {
+  const dateLocale = i18n.language === "idn" ? "id-ID" : "en-US";
+
+  const dateLabel = now?.toLocaleDateString(dateLocale, {
     weekday: "long",
     day: "numeric",
     month: "long",
@@ -89,13 +104,10 @@ export default function LandingOverview() {
           <div className="flex flex-col justify-between rounded-2xl border border-surface-border bg-black p-6 lg:col-span-1">
             <div>
               <p className="text-xl font-semibold leading-snug text-brand">
-                Frontend Developer experienced in taking products from
-                concept to launch.
+                {t("overview.introTitle")}
               </p>
               <p className="mt-4 text-sm text-neutral-300">
-                If you&apos;re looking to build a scalable, AI-driven web
-                product, get in touch to discuss your requirements with me
-                in more detail.
+                {t("overview.introDescription")}
               </p>
               <Button asChild className="mt-6 rounded-full">
                 <a
@@ -104,7 +116,7 @@ export default function LandingOverview() {
                   rel="noopener noreferrer"
                 >
                   <MessageCircle className="size-4" />
-                  Say hello
+                  {t("overview.sayHello")}
                 </a>
               </Button>
             </div>
@@ -155,11 +167,13 @@ export default function LandingOverview() {
 
               <div className="flex items-center gap-4">
                 <div className="flex gap-2">
-                  {landingTestimonials.map((item, index) => (
+                  {testimonials.map((item, index) => (
                     <button
                       key={item.name}
                       type="button"
-                      aria-label={`Show testimonial from ${item.name}`}
+                      aria-label={t("overview.showTestimonialFrom", {
+                        name: item.name,
+                      })}
                       onClick={() => setActiveTestimonial(index)}
                       className={`size-1.5 rounded-full transition-colors ${
                         index === activeTestimonial
@@ -173,7 +187,7 @@ export default function LandingOverview() {
                   <button
                     type="button"
                     onClick={handlePrevTestimonial}
-                    aria-label="Previous testimonial"
+                    aria-label={t("overview.previousTestimonial")}
                     className="flex size-8 items-center justify-center rounded-full border border-surface-border text-foreground hover:bg-surface-hover"
                   >
                     <ChevronLeft className="size-4" />
@@ -181,7 +195,7 @@ export default function LandingOverview() {
                   <button
                     type="button"
                     onClick={handleNextTestimonial}
-                    aria-label="Next testimonial"
+                    aria-label={t("overview.nextTestimonial")}
                     className="flex size-8 items-center justify-center rounded-full border border-surface-border text-foreground hover:bg-surface-hover"
                   >
                     <ChevronRight className="size-4" />
@@ -195,11 +209,10 @@ export default function LandingOverview() {
           <div className="flex flex-col gap-6 lg:col-span-1">
             <div className="rounded-2xl border border-surface-border bg-black p-6">
               <h3 className="font-semibold text-foreground">
-                Frontend Engineering
+                {t("overview.skillCardTitle")}
               </h3>
               <p className="mt-2 text-sm text-neutral-300">
-                Building scalable, maintainable interfaces with Vue, Nuxt,
-                Next.js, and React.
+                {t("overview.skillCardDescription")}
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {frontendSkills.map((skill) => (
@@ -224,7 +237,7 @@ export default function LandingOverview() {
             <div className="relative flex-1 overflow-hidden rounded-2xl border border-surface-border bg-black p-6">
               <div className="flex items-center justify-between gap-3">
                 <h3 className="font-semibold text-foreground">
-                  Frontend AI Application Specialist
+                  {t("overview.aiCardTitle")}
                 </h3>
                 <span className="shrink-0 rounded-full bg-brand/10 px-2 py-0.5 text-xs font-semibold text-brand">
                   {AI_PROFICIENCY_SCORE}/100
@@ -237,9 +250,7 @@ export default function LandingOverview() {
                 />
               </div>
               <p className="mt-3 text-sm text-neutral-300">
-                Prompt and context engineering, LLM integration, and
-                AI-driven code generation across chat interfaces, semantic
-                search, and MCP servers.
+                {t("overview.aiCardDescription")}
               </p>
             </div>
           </div>
