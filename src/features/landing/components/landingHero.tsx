@@ -77,7 +77,7 @@ export default function LandingHero() {
             {t("hero.download")}{" "}
             <a
               href="/resume.pdf"
-              download="Dzikri Alan - Fullstack Developer.pdf"
+              download="Dzikri-Alan-Fullstack-Developer.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-brand underline underline-offset-4"
