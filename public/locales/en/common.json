@@ -91,7 +91,7 @@
   "strategy": {
     "eyebrow": "Strategy",
     "paragraphs": [
-      "I build scalable software that delivers reliable user experiences. Using Vue, React, Next.js, Express, MySQL, and modern AI tooling, I develop applications that remain fast, maintainable, and resilient across real-time communication, complex integrations, and production-scale systems.",
+      "I build scalable software that delivers reliable user experiences. Using Vue, React, Next.js, Express, MySQL, Docker, and modern AI tooling, I develop applications that remain fast, maintainable, and resilient across real-time communication, complex integrations, and production-scale systems.",
       "Whether it's an AI chat platform, a fact-checking system, a geospatial visualization dashboard, or a full-stack business application, I design and engineer end-to-end solutions with a strong focus on performance, API consistency, scalability, and developer experience."
     ]
   },
