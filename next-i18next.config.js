@@ -5,4 +5,6 @@ module.exports = {
     locales: ["en", "idn"],
     localeDetection: false,
   },
+  // Picks up locale JSON edits without restarting the dev server.
+  reloadOnPrerender: process.env.NODE_ENV === "development",
 };

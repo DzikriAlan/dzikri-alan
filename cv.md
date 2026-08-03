@@ -2,11 +2,11 @@
 Bandung, Jawa Barat | 082123339099 | dzikrialan0@gmail.com | Linkedin | Portfolio
 
 SUMMARY
-Experienced Frontend Developer with 3 years in tech solutions and digital products. Proven success in optimizing developer workflows and engineering advanced AI-driven web applications, including interactive AI chat interfaces, data visualization for statistics, and fact-checking platforms. Deeply skilled in Next.js, Nuxt, Vue, and React (TypeScript), with a strong focus on UI architecture, real-time data streaming (SSE/WebSockets), and high-performance API integration.
+Experienced Fullstack Developer with 3 years in tech solutions and digital products. Proven success in optimizing developer workflows and engineering advanced AI-driven web applications, including interactive AI chat interfaces, data visualization for statistics, and fact-checking platforms. Deeply skilled in Next.js, Nuxt, Vue, and React (TypeScript), with a strong focus on UI architecture, real-time data streaming (SSE/WebSockets), and high-performance API integration.
 
 WORK EXPERIENCE
 PT. Kazee Digital Indonesia - Indonesia	  December 2023 - Present 
-Frontend Developer  	
+Fullstack Developer  	
 Designed and implemented scalable frontend architecture using Vue and TypeScript across 3 distinct products and client projects to streamline development workflows and ensure high UI consistency across engineering teams.
 Designed and engineered optimized prompts to automate API generation, reducing development turnaround time by 40% and accelerating integration workflows across frontend teams.
 Managed task prioritization and sprint alignment based on business impact, ensuring predictable delivery timelines and maintaining technical stability across teams.
@@ -18,7 +18,7 @@ Developed advanced AI-driven data visualization and fact-checking tools using Bu
 Collaborated with cross-functional teams to define strict technical requirements and maintained high production stability through automated testing.
 
 PT. Surya Microsystems - Indonesia 				                        April 2023 - December 2023
-Frontend Developer 	
+Fullstack Developer 	
 Applied maintainable, component-based frontend approaches across concurrent projects using Vue.js and Element Plus (element.io) UI library, enhancing scalable product development and accelerating time-to-market.
 Led development priorities based on client feedback and business value, successfully stabilizing sprint velocity and delivering structured weekly progress transparency.
 Spearheaded client project demos and system socialization sessions, improving technical clarity and building strong stakeholder alignment.
@@ -59,7 +59,7 @@ June 2020 – April 2023
 
 
 SKILLS
-Frontend Engineering (Vue.js, Nuxt, Next.js, React, TypeScript, JavaScript, UI Architecture, Component-Based Design, State Management, Tailwind CSS, Bulma, HTML, CSS)
+Fullstack Engineering (Vue.js, Nuxt, Next.js, React, TypeScript, JavaScript, UI Architecture, Component-Based Design, State Management, Tailwind CSS, Bulma, HTML, CSS)
 UI/UX Design: (Design Systems, Responsive Design)
 API & Integration (REST API, Server-Sent Events (SSE), Data Visualization (Highcharts))
 AI Engineering (Prompt Engineering, Context Engineering, LLM Integration)

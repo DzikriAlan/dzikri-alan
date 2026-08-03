@@ -77,7 +77,7 @@ export default function LandingHero() {
             {t("hero.download")}{" "}
             <a
               href="/resume.pdf"
-              download="Dzikri Alan - Frontend Developer.pdf"
+              download="Dzikri Alan - Fullstack Developer.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-brand underline underline-offset-4"
@@ -89,13 +89,13 @@ export default function LandingHero() {
         </div>
 
         {/* Photo panel */}
-        <div className="relative min-h-screen bg-neutral-900">
+        <div className="relative min-h-screen bg-neutral-950">
           <Image
             src={heroPhoto}
             alt="Dzikri Alan"
             fill
             priority
-            className="object-cover"
+            className="object-cover mix-blend-lighten"
           />
         </div>
       </div>

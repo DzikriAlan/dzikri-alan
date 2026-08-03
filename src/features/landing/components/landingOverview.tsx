@@ -25,10 +25,14 @@ const frontendSkills = landingSkills.filter((skill) =>
     "Tailwind CSS",
     "HTML",
     "CSS",
+    "Express.js",
+    "PostgreSQL",
+    "MySQL",
+    "Docker",
   ].includes(skill.label),
 );
 
-const AI_PROFICIENCY_SCORE = 90;
+const AI_PROFICIENCY_SCORE = 84;
 const TESTIMONIAL_AUTOPLAY_INTERVAL_MS = 6000;
 
 interface TestimonialText {

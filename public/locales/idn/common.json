@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "DzikriAlan | Frontend Developer",
-    "description": "Dzikri Alan adalah Frontend Developer yang membangun aplikasi web modern, cepat, dan skalabel."
+    "title": "DzikriAlan | Fullstack Developer",
+    "description": "Dzikri Alan adalah Fullstack Developer yang membangun aplikasi web modern, cepat, dan skalabel."
   },
   "languageToggle": {
     "id": "ID",
@@ -11,7 +11,7 @@
   "hero": {
     "badge": "Tersedia untuk bekerja",
     "title": "Menciptakan pengalaman cepat, dibangun untuk berkembang",
-    "subtitle": "Frontend Developer dengan pengalaman 3 tahun membangun antarmuka yang skalabel, performan, dan mudah dirawat untuk berbagai produk digital end-to-end.",
+    "subtitle": "Fullstack Developer dengan pengalaman 3 tahun membangun antarmuka yang skalabel, performan, dan mudah dirawat untuk berbagai produk digital end-to-end.",
     "cta": "Selengkapnya",
     "findMe": "Temukan saya di",
     "and": "dan",
@@ -20,29 +20,29 @@
     "resumeSize": "(PDF 159kb)"
   },
   "overview": {
-    "introTitle": "Frontend Developer berpengalaman membawa produk dari konsep hingga peluncuran.",
+    "introTitle": "Fullstack Developer berpengalaman membawa produk dari konsep hingga peluncuran.",
     "introDescription": "Jika Anda ingin membangun produk web yang skalabel dan berbasis AI, hubungi saya untuk membahas kebutuhan Anda lebih lanjut.",
     "sayHello": "Say hello",
     "showTestimonialFrom": "Tampilkan testimoni dari {{name}}",
     "previousTestimonial": "Testimoni sebelumnya",
     "nextTestimonial": "Testimoni berikutnya",
-    "skillCardTitle": "Frontend Engineering",
-    "skillCardDescription": "Membangun antarmuka yang skalabel dan mudah dirawat dengan Vue, Nuxt, Next.js, dan React.",
-    "aiCardTitle": "Spesialis Aplikasi AI Frontend",
+    "skillCardTitle": "Fullstack Engineering",
+    "skillCardDescription": "Membangun produk yang skalabel dan mudah dirawat dengan Vue, Nuxt, Next.js, React, Express, PostgreSQL, dan MySQL.",
+    "aiCardTitle": "Spesialis Aplikasi AI Fullstack",
     "aiCardDescription": "Prompt dan context engineering, integrasi LLM, serta pembuatan kode berbasis AI untuk antarmuka chat, pencarian semantik, dan MCP server."
   },
   "work": {
     "eyebrow": "PENGALAMAN",
     "title": "Pengalaman & Proyek",
-    "description": "Saya membangun produk dan platform frontend, mulai dari tools berbasis AI hingga sistem produksi, baik sebagai solo developer maupun bagian dari tim engineering yang lebih besar.",
+    "description": "Saya membangun produk dan platform full-stack, mulai dari tools berbasis AI hingga sistem produksi, baik sebagai solo developer maupun bagian dari tim engineering yang lebih besar.",
     "experience": [
       {
-        "role": "Frontend Developer",
-        "description": "Merancang arsitektur frontend yang skalabel dengan Vue dan TypeScript di 3 produk, mengembangkan antarmuka chat AI interaktif dengan real-time streaming, serta mengotomatisasi pembuatan API sehingga mempercepat waktu pengembangan hingga 40%."
+        "role": "Fullstack Developer",
+        "description": "Merancang arsitektur frontend yang skalabel dengan Vue dan TypeScript di 3 produk sekaligus mengembangkan fitur AI full-stack menggunakan Express dan MySQL, mencakup chat real-time, sistem fact-checking, REST API yang terstandardisasi, serta pembuatan API otomatis yang memangkas waktu pengembangan hingga 40%."
       },
       {
-        "role": "Frontend Developer",
-        "description": "Menerapkan pendekatan frontend berbasis komponen dengan Vue.js dan Element Plus di beberapa proyek klien secara bersamaan, serta memelihara aplikasi produksi termasuk LSP Exam System, Cost Control App, dan Village Website."
+        "role": "Fullstack Developer",
+        "description": "Mengembangkan dan memelihara aplikasi web full-stack di berbagai proyek klien menggunakan Vue.js, Laravel, CodeIgniter, dan MySQL. Menerapkan arsitektur frontend berbasis komponen dengan Element Plus sekaligus mengerjakan fitur backend, integrasi database, dan peningkatan pada aplikasi produksi seperti LSP Exam System, Cost Control App, dan Village Website. Berkolaborasi langsung dengan klien untuk menggali kebutuhan, mempresentasikan progres, dan memastikan solusi selaras dengan kebutuhan bisnis."
       }
     ],
     "projects": [
@@ -91,8 +91,8 @@
   "strategy": {
     "eyebrow": "Strategi",
     "paragraphs": [
-      "Saya membangun pengalaman frontend yang cepat, skalabel, dan tahan lama. Dengan Vue, Next.js, React, dan tooling AI, saya memastikan performanya tetap andal di tengah aliran data real-time dan integrasi yang kompleks.",
-      "Baik itu antarmuka chat AI, dashboard visualisasi data, atau produk full-stack, saya merancang dan mengembangkan dengan fokus pada performa, kemudahan pemeliharaan, dan pengalaman developer."
+      "Saya membangun software yang skalabel dan memberikan pengalaman pengguna yang andal. Dengan Vue, React, Next.js, Express, MySQL, dan tooling AI modern, saya mengembangkan aplikasi yang tetap cepat, mudah dirawat, dan tangguh untuk komunikasi real-time, integrasi kompleks, serta sistem berskala produksi.",
+      "Baik itu platform chat AI, sistem fact-checking, dashboard visualisasi geospasial, maupun aplikasi bisnis full-stack, saya merancang dan membangun solusi end-to-end dengan fokus kuat pada performa, konsistensi API, skalabilitas, dan pengalaman developer."
     ]
   },
   "faq": {
@@ -108,7 +108,7 @@
       },
       {
         "question": "Apa tech stack dan tools yang Anda gunakan?",
-        "answer": "Vue.js, Nuxt, Next.js, React, dan TypeScript di frontend; Node.js, NestJS, Prisma, dan PostgreSQL di backend; ditambah SSE/WebSockets untuk streaming real-time serta Claude Code, DeepSeek, dan prompt engineering untuk alur kerja berbasis AI."
+        "answer": "Vue.js, Nuxt, Next.js, React, dan TypeScript di frontend; Node.js, Express, NestJS, Prisma, PostgreSQL, MySQL, dan Docker di backend; ditambah SSE/WebSockets untuk streaming real-time serta Claude Code, DeepSeek, dan prompt engineering untuk alur kerja berbasis AI."
       },
       {
         "question": "Bisakah saya lihat portofolio Anda lebih lanjut?",

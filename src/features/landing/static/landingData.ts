@@ -23,6 +23,10 @@ export const landingSkills = [
   { label: "PHP", icon: "/skills/php.svg" },
   { label: "Laravel", icon: "/skills/laravel.svg" },
   { label: "CodeIgniter", icon: "/skills/codeigniter.svg" },
+  { label: "Express.js", icon: "/skills/expressjs.svg" },
+  { label: "PostgreSQL", icon: "/skills/postgresql.svg" },
+  { label: "MySQL", icon: "/skills/mysql.svg" },
+  { label: "Docker", icon: "/skills/docker.svg" },
   { label: "HTML", icon: "/skills/html.svg" },
   { label: "CSS", icon: "/skills/css.svg" },
 ];
